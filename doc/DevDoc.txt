@@ -47,10 +47,15 @@ ToDo: As of 13.02.09
 CHANGELOG
 ********************************************************************************
 
+v0.0.2dev:
+=========
++ (rk) CHG: "initialized" development version 0.0.2dev (v0.0.1 has been tagged in SVN before)
+
+
 
 v0.0.1:  [used online for T3DD09 payment April/May 2009]
 ======
-+ (rk) finished first standalone version of this extension (has been tested with pt_conference for T3DD09 payment)
++ (rk) ADD: finished first standalone version of this extension (has been tested with pt_conference for T3DD09 payment)
 
 
 
