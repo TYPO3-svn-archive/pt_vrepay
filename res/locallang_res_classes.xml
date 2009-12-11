@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Language labels for resource classes of extension pt_vrepay</description>
+        <type>database</type>
+        <csh_table></csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="tx_ptvrepay_transactionException.requestTooManyTriesForSameRefNo">Too many tries for same reference number!</label>
+            <label index="tx_ptvrepay_transactionException.requestCurlExecReturnError">Transaction execution error!</label>
+            <label index="tx_ptvrepay_transactionException.requestCurlReturnPostContentError">Payment request error! Please contact the shop operator.</label>
+            <label index="tx_ptvrepay_transactionException.requestCurlReturnSystemError">Payment service temporary not available! Please try again later.</label>
+            <label index="tx_ptvrepay_transactionException.responseErrorRequestMethod">Invalid response type!</label>
+            <label index="tx_ptvrepay_transactionException.responseErrorRemoteIP">Invalid response sender! </label>
+            <label index="tx_ptvrepay_transactionException.noRequestIdFoundForResponse">Transaction already processed or no transaction found to process.</label>
+            <label index="tx_ptvrepay_transactionException.noValidResponseParamsFound">No valid transaction response found.</label>
+            <label index="tx_ptvrepay_transactionException.responseExpectedStatusError">Transaction status error! Please contact the shop operator.</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="tx_ptvrepay_transactionException.requestTooManyTriesForSameRefNo">Zu viele Versuche für gleiche Referenz-Nummer!</label>
+            <label index="tx_ptvrepay_transactionException.requestCurlExecReturnError">Transaktionsausführungs-Fehler!</label>
+            <label index="tx_ptvrepay_transactionException.requestCurlReturnPostContentError">Zahlungsanfrage-Fehler! Bitte kontaktieren Sie den Shop-Betreiber.</label>
+            <label index="tx_ptvrepay_transactionException.requestCurlReturnSystemError">Bezahlsystem vorübergehend nicht erreichbar! Bitte versuchen Sie es später noch einmal.</label>
+            <label index="tx_ptvrepay_transactionException.responseErrorRequestMethod">Ungültiger Antwort-Typ!</label>
+            <label index="tx_ptvrepay_transactionException.responseErrorRemoteIP">Ungültiger Antwort-Sender!</label>
+            <label index="tx_ptvrepay_transactionException.noRequestIdFoundForResponse">Transaktion bereits abgeschlossen oder keine Transaktion zur Weiterverarbeitung gefunden.</label>
+            <label index="tx_ptvrepay_transactionException.noValidResponseParamsFound">Keine gültige Transaktions-Antwort gefunden.</label>
+            <label index="tx_ptvrepay_transactionException.responseExpectedStatusError">Transaktionsstatus-Fehler! Bitte kontaktieren Sie den Shop-Betreiber.</label>
+        </languageKey>
+    </data>
+</T3locallang>

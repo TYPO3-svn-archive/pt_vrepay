@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_ptvrepay_pi2&quot;</description>
+	</meta>
+	<data type="array">
+        <languageKey index="default" type="array">
+            <label index="label_1">Label 1</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="label_1">Label 1</label>
+        </languageKey>
+    </data>
+</T3locallang>

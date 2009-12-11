@@ -1,0 +1,87 @@
+/*
+$Id: constants.txt,v 1.14 2009/02/16 15:02:15 ry37 Exp $
+ 
+possible subcategories: 
+----------------------
+enable      Used for options that enable or disable primary functions of a template
+dims        Dimensions of all kinds; pixels, widths, heights of images, frames, cells and so on.
+file        Files like background images, fonts and so on. Other options related to the file may also enter
+typo        Typography and related constants
+color       Color setup. Many colors will be found with related options in other categories though.
+links       Links: Targets typically
+language    Language specific options.
+Subcategories based on the default content elements:
+cheader,cheader_g,ctext,ctextpic,cimage,cbullets,ctable,cuploads,cmultimedia,cmailform,csearch,clogin,csplash,cmenu,cshortcut,clist,cscript,chtml
+These are all categories reserved for options that relate to content rendering for each type of tt_content element. See static_template "content (default)" and "styles.content (default)" for examples.
+
+possible data types (type=):
+---------------------------
+int [low-high]              integer, opt. in range "low" to "high"
+int+                        positive integer
+offset [L1,L2,...L6]        comma-separated integers. Default is "x,y", but as comma separated parameters in brackets you can specify up to 6 labels being comma separated! If you wish to omit one of the last 4 fields, just don't enter a label for that element.
+color                       HTML color
+wrap                        HTML-code that is wrapped around some content.
+options [item1,item2,...]   Selectbox with values/labels item1, item2 etc. Commaseparated. Split by "=" also and in that case, first part is label, second is value
+boolean [truevalue]         Boolean, opt. you can define the value of "true", def.=1
+comment                     Boolean, checked= "", not-checked = "#".
+file [ext-list/IMAGE_EXT]   Selectorbox with resources. Opt. list allowed extensions (no space in list!), eg. "[ttf]" or "[txt,html,htm]". You can also enter "[IMAGE_EXT]" in which case the default image-extensions are listed. (used for datatype "imgResouce")
+string (the default)        Just a string value
+*/ 
+
+
+// Configuration for pt_vrepay extension, accessible through BE constant editor
+config.tx_ptvrepay {
+    
+    
+    # cat=pt_vrepay/enable/050; type=string; label= VR-ePay system URL: URL of the VR-ePay system to be used: "https://payinte.vr-epay.de/pbr/transaktion" for the test system (default), "https://pay.vr-epay.de/pbr/transaktion" for the live system. 
+    systemUrl = https://payinte.vr-epay.de/pbr/transaktion
+    
+    # cat=pt_vrepay/enable/100; type=string; label= VR-ePay response IP address: IP address of the VR-ePay response system to be allowed for receiving responses. This may be different for test and live system. 
+    responseIp = 
+    
+    # cat=pt_vrepay/enable/200; type=string; label= User ID: Your vrepay user id
+    accountUserId =
+    
+    # cat=pt_vrepay/enable/210; type=string; label= Password: Your vrepay password
+    accountPassword =
+    
+    # cat=pt_vrepay/enable/220; type=string; label= Merchant ID: for "single" merchants the merchantId is equal to the above set accountUserId (you don't have to enter it here again), for multiple connections the IDs differ (if one is entered here, this one is taken).
+    merchantId =
+    
+    # cat=pt_vrepay/enable/300; type=string; label= Dialog language: Language for to be used by the "dialog" transaction interface (currently only "DE" for German and "EN" for English supported).
+    dialogLanguage = EN
+    
+    # cat=pt_vrepay/enable/310; type=string; label= Allowed payment methods: *Comma* separated list of allowed payment methods to be used by the "dialog" transaction interface. Currently the extension supports credit card payment types (VISA = Visa, ECMC = Mastercard, DINERS = Diners, AMEX = Amex, JCB = JCB) and electronic cash for Germany (ELV = German "elektonisches Lastschriftverfahren). The merchant has to get a contract with VR-ePay for the different payment types, the test environment supports VISA, ECMC and ELV only.
+    allowedPaymentMethods = VISA,ECMC
+    
+    
+    // ***** LOGGING SETTINGS *****
+    
+    # cat=pt_vrepay/enable/350; type=string; label=Audit log output directory: Directory path for generated audit log (absolute server path, don't forget the prefacing and closing slashes "/").
+    loggingDirectory = 
+    
+    # cat=pt_vrepay/enable/360; type=string; label=Email address for system mails: Email address (comma-seperated list for multiple recipients) for auto-generated admin mails of this extension (e.g. logging errors).
+    adminEmailAddress = 
+    
+    
+    // ***** PAGES SETTINGS *****
+    
+    # cat=pt_vrepay/enable/400; type=string; label= Response PID: Identifier (PID or alias) of the TYPO3 page where you've integrated this extensions 'VR-ePay Response Processor' (pi2). This setting is mandatory for sending a VR-ePay request. IMPORTANT: The response page has to be a SSL URL, so "https://" will be prefixed automatically to the URL built from this configuration and sent to VR-ePay!
+    pidResponse =
+    
+    # cat=pt_vrepay/enable/420; type=string; label= Terms and conditions PID: Identifier (PID or alias) of the TYPO3 page containing your terms and conditions related to the payment transaction. This setting is mandatory for sending a VR-ePay request.
+    pidTermsCond =
+    
+    # cat=pt_vrepay/enable/440; type=string; label=Transaction storage PID: Identifier (PID or alias) of the TYPO3 page/sysfolder where to store transaction records
+    pidTransactionStorage = 1
+    
+    # cat=pt_vrepay/enable/500; type=string; label=Shop return page on success: Identifier (PID or alias) of the TYPO3 page/sysfolder where to return from the payment ext. in case of payment success (pidShopReturnOnSuccess, pidShopReturnOnError and pidShopReturnOnAbort may point to the same page if the different states are handled by the shop software). GET params may be attached to pid or alias, e.g. '55?param=value' or 'alias?param=value'.
+    pidShopReturnOnSuccess = 
+    
+    # cat=pt_vrepay/enable/510; type=string; label=Shop return page on error: Identifier (PID or alias) of the TYPO3 page/sysfolder where to return from the payment ext. in case of payment error (pidShopReturnOnSuccess, pidShopReturnOnError and pidShopReturnOnAbort may point to the same page if the different states are handled by the shop software). GET params may be attached to pid or alias, e.g. '55?param=value' or 'alias?param=value'.
+    pidShopReturnOnError = 
+    
+    # cat=pt_vrepay/enable/520; type=string; label=Shop return page on abort: Identifier (PID or alias) of the TYPO3 page/sysfolder where to return from the payment ext. in case of payment abort (pidShopReturnOnSuccess, pidShopReturnOnError and pidShopReturnOnAbort may point to the same page if the different states are handled by the shop software). GET params may be attached to pid or alias, e.g. '55?param=value' or 'alias?param=value'.
+    pidShopReturnOnAbort = 
+    
+}

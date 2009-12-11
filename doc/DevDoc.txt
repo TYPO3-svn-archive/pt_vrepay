@@ -1,0 +1,60 @@
+********************************************************************************
+DevDoc.txt: Development notes for EXT pt_vrepay
+Author: Rainer Kuhn
+--------------------------------------------------------------------------------
+
+Legend:
+FIX: fixed a bug
+CHG: changed items/features
+ADD: added feature
+RMV: removed item
+RFT: refactoring / code cleanup
+TODO: todo
+********************************************************************************
+
+
+
+ToDo: As of 13.02.09
+====================
+- TODO: integration into GSA Shop using the pt_tools payment API:
+        /**********************************************************************/
+        // TODO: this part has to be sourced-out to the shop software (use the outcommented (#) values from pt_gsashop for the appropriate lines!)
+        $epaymentRequestDataArray = array(
+            'merchantReference' => 'InvNumber '.rand(10000, 99999), #$this->orderWrapperObj->get_relatedDocNo(),
+            'amount' => 4.99, #$this->orderWrapperObj->get_orderObj()->getPaymentSumTotal(),
+            'currencyCode' => 'EUR', #$this->gsaShopConfig['currencyCode'],
+            'articleQuantity' => 1, #$this->orderWrapperObj->get_orderObj()->countArticlesTotal(),
+            'infotext' => 'Infotext bla' #$epaymentDescription,
+            // 'billingAddress' => $this->orderWrapperObj->get_feCustomerObj()->getDefaultBillingAddress() // not needed for VR-ePay
+        );
+        $epaymentRequestDataObj = new tx_pttools_paymentRequestInformation($epaymentRequestDataArray);
+        $epaymentRequestDataObj->storeToSession();
+        /**********************************************************************/
+- TODO: security concept for payment returns to the shop
+        - adaption of the shop's "salt" handling? (passing the salt in pt_tools session in both directions?)
+- TODO: write documentation/extension manual (should be done _after_ successful GSA Shop integration using the pt_tools payment API)
+        including the following requirements:
+        - to configure and use pt_vrepay, you need he following prerequisites from the German payment clearer VR-ePay:
+            - Institutskennung und Passwort (see page 6 of VR-ePay specification)
+            - Testaccount zum Anbindungstest (see page 6 of VR-ePay specification)
+            - IP-Adresse für Rückantworten (see page 28 of VR-ePay specification)
+- TODO: system emails to admin (see TODO notes in the code)
+- TODO (optional): switch to MVC architecture?
+
+
+
+********************************************************************************
+CHANGELOG
+********************************************************************************
+
+
+v0.0.1:  [used online for T3DD09 payment April/May 2009]
+======
++ (rk) finished first standalone version of this extension (has been tested with pt_conference for T3DD09 payment)
+
+
+
+
+
+
+    

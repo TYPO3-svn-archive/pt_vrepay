@@ -1,0 +1,36 @@
+/**
+ * all settings assigned like {$config.tx_ptvrepay.*} originate from /static/constants.txt
+ * 
+ * $Id: setup.txt,v 1.10 2009/02/10 15:45:34 ry37 Exp $
+ */
+
+// general settings
+config.tx_ptvrepay {
+ 
+    systemUrl = {$config.tx_ptvrepay.systemUrl}
+    responseIp = {$config.tx_ptvrepay.responseIp}
+    accountUserId = {$config.tx_ptvrepay.accountUserId}
+    accountPassword = {$config.tx_ptvrepay.accountPassword}
+    dialogLanguage = {$config.tx_ptvrepay.dialogLanguage}
+    allowedPaymentMethods = {$config.tx_ptvrepay.allowedPaymentMethods}
+    
+    loggingDirectory = {$config.tx_ptvrepay.loggingDirectory}
+    adminEmailAddress = {$config.tx_ptvrepay.adminEmailAddress}
+    
+    pidResponse = {$config.tx_ptvrepay.pidResponse}
+    pidTermsCond = {$config.tx_ptvrepay.pidTermsCond}
+    pidTransactionStorage = {$config.tx_ptvrepay.pidTransactionStorage}
+    
+}
+
+// settings for pi1
+plugin.tx_ptvrepay_pi1 {
+ 
+    pidShopReturnOnSuccess = {$config.tx_ptvrepay.pidShopReturnOnSuccess}
+    pidShopReturnOnError = {$config.tx_ptvrepay.pidShopReturnOnError}
+    pidShopReturnOnAbort = {$config.tx_ptvrepay.pidShopReturnOnAbort}
+    
+}
+ 
+ 
+ 
