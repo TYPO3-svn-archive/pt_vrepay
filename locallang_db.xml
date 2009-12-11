@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'pt_vrepay'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_ptvrepay_transactions">VR-ePay Transactions</label>
+			<label index="tx_ptvrepay_transactions.reference_no">Unique transaction reference number</label>
+            <label index="tx_ptvrepay_transactions.response_secret">Response secret</label>
+            <label index="tx_ptvrepay_transactions.merchant_reference">Merchant reference (e.g. invoice number)</label>
+			<label index="tx_ptvrepay_transactions.amount">Amount (noted as smallest unit)</label>
+            <label index="tx_ptvrepay_transactions.request_result">Request result</label>
+            <label index="tx_ptvrepay_transactions.status">Transaction status</label>
+			<label index="tx_ptvrepay_transactions.response_params">Response parameters</label>
+			<label index="tt_content.list_type_pi1">VR-ePay Dialog Transaction (Request)</label>
+			<label index="tt_content.list_type_pi2">VR-ePay Response Processor</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_ptvrepay_transactions">VR-ePay Transaktionen</label>
+			<label index="tx_ptvrepay_transactions.reference_no">Eindeutige Transaktions-Referenznummer</label>
+            <label index="tx_ptvrepay_transactions.response_secret">Antwortgeheimnis</label>
+            <label index="tx_ptvrepay_transactions.merchant_reference">Händler-Referenz (z.B. Rechnungsnummer)</label>
+			<label index="tx_ptvrepay_transactions.amount">Summe (in kleinster Einheit)</label>
+            <label index="tx_ptvrepay_transactions.request_result">Anfrage-Ergebnis</label>
+            <label index="tx_ptvrepay_transactions.status">Transaktions-Status</label>
+			<label index="tx_ptvrepay_transactions.response_params">Antwort-Parameter</label>
+			<label index="tt_content.list_type_pi1">VR-ePay Dialog-Transaktion (Request)</label>
+			<label index="tt_content.list_type_pi2">VR-ePay Antwort-Verarbeitung</label>
+		</languageKey>
+	</data>
+</T3locallang>
